@@ -8,10 +8,10 @@ class Photo extends Component {
     return(
       <div>
         <div>
-          <button onClick={this.props.loadCocktail}>CLICK ME!</button>
+          <button className="button" onClick={this.props.loadCocktail}>CLICK ME!</button>
         </div>
         <div>
-          <p>{this.props.cocktail}</p>
+          <p className="drink_name">{this.props.cocktail}</p>
         </div>
       </div>
     )
