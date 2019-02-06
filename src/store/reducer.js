@@ -8,7 +8,7 @@ const reducer = (state = initialState, action) => {
     case('GENERATE_COCKTAIL'):
       console.log(action.payload.drinks[0].strDrinkThumb);
       console.log("in generate cocktail", action.payload.drinks[0]);
-      return {...state, cocktail: action.payload.drinks[0].strDrink, photo: action.payload.drinks[0].strDrinkThumb}
+      return {...state, cocktail: action.payload.drinks[0].strDrink}
   default:
     return state
   }
