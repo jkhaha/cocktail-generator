@@ -8,10 +8,13 @@ class Photo extends Component {
     return(
       <div>
         <div>
-          <button className="button" onClick={this.props.loadCocktail}>CLICK ME!</button>
+          <button className="button" onClick={this.props.loadCocktail}>SURPRISE ME!</button>
         </div>
         <div>
           <p className="drink_name">{this.props.cocktail}</p>
+        </div>
+        <div>
+          <img className="photo" src={this.props.photo}></img>
         </div>
       </div>
     )
@@ -24,7 +27,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = (state) => ({
   cocktail: state.cocktail,
-  image: state.image
+  photo: state.photo
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Photo);
