@@ -6,9 +6,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case('GENERATE_COCKTAIL'):
-      console.log(action.payload.drinks[0].strDrinkThumb);
-      console.log("in generate cocktail", action.payload.drinks[0]);
-      return {...state, cocktail: action.payload.drinks[0].strDrink}
+      return {...state, cocktail: action.payload.drinks[0].strDrink, photo: action.payload.drinks[0].strDrinkThumb}
   default:
     return state
   }
