@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './components/Button.js'
+import Photo from './components/Photo.js'
 
 import './App.css';
 
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <p>Random Cocktail Generator</p>
-        <Button/>
+        <Photo/>
       </div>
     );
   }

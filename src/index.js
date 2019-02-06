@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 // provider connects store and react
-import { reducer } from "./store/reducer"
+import reducer from "./store/reducer"
 // reducers take in state and action
 
-const store = createStore(reducer)
+const store = createStore(reducer, applyMiddleware(thunk))
 // invoke createStore and save it into the constant value of "store"
 
 ReactDOM.render(
